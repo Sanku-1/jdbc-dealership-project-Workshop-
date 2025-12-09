@@ -1,20 +1,21 @@
 package com.yearup.dealership.models;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class SalesContract {
     private int contractId;
     private String vin;
-    private LocalDate saleDate;
+    private Date saleDate;
     private double price;
 
-    public SalesContract(String vin, LocalDate saleDate, double price) {
+    public SalesContract(String vin, Date saleDate, double price) {
         this.vin = vin;
         this.saleDate = saleDate;
         this.price = price;
     }
 
-    public SalesContract(int contractId, String vin, LocalDate saleDate, double price) {
+    public SalesContract(int contractId, String vin, Date saleDate, double price) {
         this.contractId = contractId;
         this.vin = vin;
         this.saleDate = saleDate;
@@ -37,11 +38,11 @@ public class SalesContract {
         this.vin = vin;
     }
 
-    public LocalDate getSaleDate() {
+    public Date getSaleDate() {
         return saleDate;
     }
 
-    public void setSaleDate(LocalDate saleDate) {
+    public void setSaleDate(Date saleDate) {
         this.saleDate = saleDate;
     }
 

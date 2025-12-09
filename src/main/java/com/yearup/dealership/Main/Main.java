@@ -10,6 +10,7 @@ import com.yearup.dealership.models.Vehicle;
 import org.apache.commons.dbcp2.BasicDataSource;
 
 import javax.sql.DataSource;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
@@ -101,12 +102,13 @@ public class Main {
         System.out.print("Enter the sale date (YYYY-MM-DD): ");
         String saleDateStr = scanner.nextLine();
         LocalDate saleDate = LocalDate.parse(saleDateStr);
+        Date saleDateSQL = Date.valueOf(LocalDate.parse(saleDateStr));
 
         System.out.print("Enter the price: ");
         double price = scanner.nextDouble();
         scanner.nextLine(); // Consume the newline character
 
-        SalesContract salesContract = new SalesContract(vin, saleDate, price);
+        SalesContract salesContract = new SalesContract(vin, saleDateSQL, price);
         salesDao.addSalesContract(salesContract);
 
         System.out.println("Sales contract added successfully.");
@@ -117,16 +119,19 @@ public class Main {
         System.out.print("Enter the lease start date (YYYY-MM-DD): ");
         String leaseStartDateStr = scanner.nextLine();
         LocalDate leaseStartDate = LocalDate.parse(leaseStartDateStr);
+        Date leaseStartDateSQL = Date.valueOf(LocalDate.parse(leaseStartDateStr));
 
         System.out.print("Enter the lease end date (YYYY-MM-DD): ");
         String leaseEndDateStr = scanner.nextLine();
         LocalDate leaseEndDate = LocalDate.parse(leaseEndDateStr);
+        Date leaseEndDateSQL = Date.valueOf(LocalDate.parse(leaseEndDateStr));
+
 
         System.out.print("Enter the monthly payment: ");
         double monthlyPayment = scanner.nextDouble();
         scanner.nextLine(); // Consume the newline character
 
-        LeaseContract leaseContract = new LeaseContract(vin, leaseStartDate, leaseEndDate, monthlyPayment);
+        LeaseContract leaseContract = new LeaseContract(vin, leaseStartDateSQL, leaseEndDateSQL, monthlyPayment);
         leaseDao.addLeaseContract(leaseContract);
 
         System.out.println("Lease contract added successfully.");
