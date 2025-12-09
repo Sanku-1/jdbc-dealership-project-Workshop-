@@ -1,22 +1,23 @@
 package com.yearup.dealership.models;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class LeaseContract {
     private int contractId;
     private String vin;
-    private LocalDate leaseStart;
-    private LocalDate leaseEnd;
+    private Date leaseStart;
+    private Date leaseEnd;
     private double monthlyPayment;
 
-    public LeaseContract(String vin, LocalDate leaseStart, LocalDate leaseEnd, double monthlyPayment) {
+    public LeaseContract(String vin, Date leaseStart, Date leaseEnd, double monthlyPayment) {
         this.vin = vin;
         this.leaseStart = leaseStart;
         this.leaseEnd = leaseEnd;
         this.monthlyPayment = monthlyPayment;
     }
 
-    public LeaseContract(int contractId, String vin, LocalDate leaseStart, LocalDate leaseEnd, double monthlyPayment) {
+    public LeaseContract(int contractId, String vin, Date leaseStart, Date leaseEnd, double monthlyPayment) {
         this.contractId = contractId;
         this.vin = vin;
         this.leaseStart = leaseStart;
@@ -40,19 +41,19 @@ public class LeaseContract {
         this.vin = vin;
     }
 
-    public LocalDate getLeaseStart() {
+    public Date getLeaseStart() {
         return leaseStart;
     }
 
-    public void setLeaseStart(LocalDate leaseStart) {
+    public void setLeaseStart(Date leaseStart) {
         this.leaseStart = leaseStart;
     }
 
-    public LocalDate getLeaseEnd() {
+    public Date getLeaseEnd() {
         return leaseEnd;
     }
 
-    public void setLeaseEnd(LocalDate leaseEnd) {
+    public void setLeaseEnd(Date leaseEnd) {
         this.leaseEnd = leaseEnd;
     }
 
