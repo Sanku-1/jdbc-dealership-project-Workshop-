@@ -58,18 +58,21 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String color = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String color = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
+                    vehicles.add(createVehicleFromResultSet(resultSet));
+
                 }
             }
         } catch (Exception ex) {
@@ -91,18 +94,20 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String color = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String color = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
+                      vehicles.add(createVehicleFromResultSet(resultSet));
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
                 }
             }
         } catch (Exception ex) {
@@ -124,18 +129,20 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String color = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String color = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
+                      vehicles.add(createVehicleFromResultSet(resultSet));
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
                 }
             }
         } catch (Exception ex) {
@@ -156,18 +163,20 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String vehicleColor = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String vehicleColor = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, vehicleColor, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
+                      vehicles.add(createVehicleFromResultSet(resultSet));
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, vehicleColor, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
                 }
             }
         } catch (Exception ex) {
@@ -189,18 +198,21 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String color = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String color = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, color, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
+                    vehicles.add(createVehicleFromResultSet(resultSet));
+
                 }
             }
         } catch (Exception ex) {
@@ -221,18 +233,20 @@ public class VehicleDao {
             ResultSet resultSet = preparedStatement.executeQuery();{
 
                 while (resultSet.next()) {
-                    String vin = resultSet.getString("VIN");
-                    String vehicleMake = resultSet.getString("make");
-                    String vehicleModel = resultSet.getString("model");
-                    int year = resultSet.getInt("year");
-                    boolean sold = (resultSet.getInt("SOLD")) == 1;
-                    String vehicleColor = resultSet.getString("color");
-                    String vehicleType = resultSet.getString("vehicleType");
-                    int odometer = resultSet.getInt("odometer");
-                    double price = resultSet.getDouble("price");
+//                    String vin = resultSet.getString("VIN");
+//                    String vehicleMake = resultSet.getString("make");
+//                    String vehicleModel = resultSet.getString("model");
+//                    int year = resultSet.getInt("year");
+//                    boolean sold = (resultSet.getInt("SOLD")) == 1;
+//                    String vehicleColor = resultSet.getString("color");
+//                    String vehicleType = resultSet.getString("vehicleType");
+//                    int odometer = resultSet.getInt("odometer");
+//                    double price = resultSet.getDouble("price");
+//
+//                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, vehicleColor, vehicleType, odometer, price);
+//                    vehicles.add(vehicle);
 
-                    Vehicle vehicle = new Vehicle(vin, vehicleMake, vehicleModel, year, sold, vehicleColor, vehicleType, odometer, price);
-                    vehicles.add(vehicle);
+                     vehicles.add(createVehicleFromResultSet(resultSet));
                 }
             }
         } catch (Exception ex) {
